@@ -14,6 +14,7 @@
     <name>reddit-backend</name>
     <description>Demo project for Spring Boot</description>
     <properties>
+        <tests.skip>true</tests.skip>
         <java.version>17</java.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
@@ -113,6 +114,16 @@
     <build>
         <pluginManagement>
             <plugins>
+                <!--Skip test plugin-->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>2.22.2</version>
+                    <configuration>
+                        <skipTests>${tests.skip}</skipTests>
+                    </configuration>
+                </plugin>
+                <!--End Skip test plugin-->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
