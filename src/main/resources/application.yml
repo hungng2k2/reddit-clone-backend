@@ -1,7 +1,7 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://database-2.cvn2sj40r47b.ap-southeast-1.rds.amazonaws.com:3306/game
+    url: jdbc:mysql://database-2.cvn2sj40r47b.ap-southeast-1.rds.amazonaws.com:3306/reddit_clone
     username: admin
     password: 123123123
 
