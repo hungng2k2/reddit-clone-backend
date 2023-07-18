@@ -1,9 +1,13 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/reddit-clone
-    username: root
-    password:
+    url: jdbc:mysql://database-2.cvn2sj40r47b.ap-southeast-1.rds.amazonaws.com:3306/game
+    username: admin
+    password: 123123123
+
+#    url: jdbc:mysql://127.0.0.1:3306/reddit-clone
+#    username: root
+#    password:
   jpa:
     show-sql: true
     properties:
