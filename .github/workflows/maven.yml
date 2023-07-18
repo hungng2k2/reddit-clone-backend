@@ -28,6 +28,6 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      run: mvn package spring-boot:repackage
+      run: mvn clean package spring-boot:repackage
     - name: Execute jar file
       run: sudo kill $(sudo lsof -i tcp:8080 | tr -s " " | cut -d " " -f 2 | sed -n 2p) & sudo java -jar /home/ec2-user/actions-runner/_work/reddit-clone-backend/reddit-clone-backend/target/reddit-backend-0.0.1-SNAPSHOT.jar &
