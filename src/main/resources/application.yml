@@ -1,0 +1,32 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/reddit-clone
+    username: root
+    password:
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    hibernate:
+      ddl-auto: update
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQLDialect
+##### Mail properties #####
+  mail:
+    host: sandbox.smtp.mailtrap.io
+    port: 2525
+    username: c745e632f73896
+    password: 52bf3b025bdb33
+    protocol: smtp
+server:
+  error:
+    include-message: always
+    include-binding-errors: always
+    include-stacktrace: never
+    include-exception: false
+app:
+  jwt:
+    secret: 472D4B6150645367566B59703373367639792442264528482B4D625165546857
+    expiration: 900000
