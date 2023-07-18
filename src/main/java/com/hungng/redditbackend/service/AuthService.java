@@ -16,6 +16,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.time.Instant;
 import java.util.UUID;
@@ -47,11 +48,12 @@ public class AuthService {
         userRepo.save(newUser);
 
         String token = generateVerificationToken(newUser);
+        String baseUrl = ServletUriComponentsBuilder.fromCurrentContextPath().build().toUriString();
         mailService.sendMail(new NotificationEmail(
                 "Please Activate your account",
                 newUser.getEmail(),
                 "Thank you for signing up, please click on the below url to activate your account: " +
-                        "http://localhost:8080/api/auth/accountVerification/" + token));
+                        baseUrl+ "/api/auth/accountVerification/" + token));
     }
 
 

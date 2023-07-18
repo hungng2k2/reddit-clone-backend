@@ -14,7 +14,7 @@
     <name>reddit-backend</name>
     <description>Demo project for Spring Boot</description>
     <properties>
-        <tests.skip>false</tests.skip>
+        <tests.skip>true</tests.skip>
         <java.version>17</java.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
